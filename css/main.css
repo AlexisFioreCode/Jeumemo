@@ -87,6 +87,61 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+header {
+  min-height: 20vh;
+  background-color: rgb(165, 213, 243);
+  padding-top: 2vh;
+}   
+footer {
+  display: none;
+}   
+.tabandpconly {
+  display: none;
+}
+html {
+  background-color: lightgray;
+}
+main {
+  background-color: lightgray;
+  padding-top: 5vh;
+}
+main section div {
+  height: 9vh;
+  margin-top: 5vh;
+}
+#green {
+  background-color: green;
+}
+#orange {
+  background-color: orange;
+}
+#yellow {
+  background-color: yellow;
+}
+#blue {
+  background-color: blue;
+}
+#brown {
+  background-color: brown;
+}
+#red {
+  background-color: red;
+}
+#purple {
+  background-color: purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
