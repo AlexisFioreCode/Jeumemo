@@ -15,27 +15,38 @@ for(let i =0 ; i< allcards.length ; i++) {
     allcards[i].onclick = function(){
         allcards[i].style.backgroundColor= shuffleArray[i];
         cardColor.push(allcards[i])
+        cardColor[0].style.pointerEvents = "none";
         console.log(cardColor);
-        if(cardColor.length === 2 ) {
-            compare();   
-        }        
+        setTimeout(function(){ if(cardColor.length === 2 ) {
+             compare();   
+             };
+        }, 1500);
+        trycheat()            
     };    
 };
 function compare(){
     if (window.getComputedStyle(cardColor[0],null).getPropertyValue("background") === window.getComputedStyle(cardColor[1],null).getPropertyValue("background")) {        
         score ++;
-        console.log(score);
-        setTimeout(function(){ alert("Bien joué 1 points");}, 2000);
-          
+        console.log(score);     
     } 
     else {
         cardColor[0].style.background = "#000000";
         cardColor[1].style.background = "#000000";
+
     }
+    cardColor[0].style.pointerEvents = "auto";
     cardColor = [];
 };
 
-
+function trycheat(){
+    if(cardColor.length > 2 ) {
+        cardColor[0].style.background = "#000000";
+        cardColor[1].style.background = "#000000";
+        cardColor[2].style.background = "#000000";
+        cardColor = [];
+        alert("Ne choisir que deux cartes")
+    };  
+}
 
 
          
@@ -46,7 +57,8 @@ function getResolution() {
     //si la résolution de l'écran est de moins de 768px  
     if(screen.width < 768) {
         btntext.innerText = "Veuillez vous mettre en mode paysage pour jouer"
-    } else {
+    } 
+    else {
         btntext.innerText = "Jouer au jeu"
     }
 }
