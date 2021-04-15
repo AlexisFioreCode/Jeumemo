@@ -87,14 +87,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+  /* Personal CSS */
 header {
-  min-height: 20vh;
-  background-color: rgb(165, 213, 243);
+  min-height: 10vh;
   text-align: center;
+  background-color: #3636a8;
+  color: white;
 }
 h1 {
-  padding-top: 5vh;
+  padding-top: 3vh;
   font-size: 2rem;
+  font-family: Roboto ;
 }   
 footer {
   display: none;
@@ -103,10 +107,9 @@ footer {
   display: none;
 }
 body {
-  background-color: lightgray;
+  background-color: rgb(210, 235, 250);
 }
 #thegame {
-  background-color: lightgray;
   padding-top: 5vh;
   display: none;
 }
@@ -115,12 +118,33 @@ body {
   color: white;
   display: block;
   margin: 20vh auto;
+  min-height: 10vh;
+}
+#reload {
+  background-color: black;
+  color: white;
+  margin: 20vh auto;
 }
 .col {
   height: 20vh;
   margin: 5vh 2vw;
   width: 10vw;
   background-color: black;
+}
+@media screen and (min-width :1024px) {
+  header {
+    display: flex;
+  }
+  footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+  }   
+  .tabandpconly {
+    display: block;
+    font-family: Roboto;
+  }
 }
 
 /* ==========================================================================
