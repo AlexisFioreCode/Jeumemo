@@ -102,12 +102,19 @@ footer {
 .tabandpconly {
   display: none;
 }
-html {
+body {
   background-color: lightgray;
 }
-main {
+#thegame {
   background-color: lightgray;
   padding-top: 5vh;
+  display: none;
+}
+#play {
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 20vh auto;
 }
 .col {
   height: 20vh;

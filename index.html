@@ -21,7 +21,7 @@
 
   <meta name="theme-color" content="#fafafa">
 </head>
-<body>
+<body onload="getResolution()">
   <header>
     <div class="container">
       <h1>Le jeu du Memory </h1>
@@ -32,8 +32,10 @@
         Le jeu se termine quand toutes les paires de cartes ont été découvertes et ramassées où à la fin du temps réglementaire. </p>
     </div>
   </header>
-
-  <main>
+  <div class="container">
+    <button class="btn " id="play" onclick="removeBtn()"></button>
+  </div>
+  <main id="thegame">
     <div class="container-fluid">
       <div class="row">
         <div class="col"></div>
@@ -52,17 +54,6 @@
         <div class="col"></div>
       </div>
     </div>
-    <!-- <section class="cartes flex">       
-      
-    </section>
-    <section class="cartes flex">      
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>         
-    </section> -->
   </main>
 
 
