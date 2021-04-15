@@ -1,5 +1,9 @@
 //Variable des couleurs
 let colors = ["red","red","green","green","blue","blue","yellow","yellow","orange","orange","purple","purple"];
+// randomiser mon tableau colors
+const shuffleArray = colors.sort((a, b) => 0.5 - Math.random());
+console.log(shuffleArray);
+ 
 //contenant les couleurs des cartes retournées à un moment donné du jeu.
 let cardColor=[];
 //Cette variable contient le nombre de paires de cartes qui ont déjà été trouvées.
@@ -9,23 +13,32 @@ let allcards = document.getElementsByClassName("col");
 console.log(allcards);
 for(let i =0 ; i< allcards.length ; i++) {
     allcards[i].onclick = function(){
-        allcards[i].style.background= colors[i];
+        allcards[i].style.backgroundColor= shuffleArray[i];
         cardColor.push(allcards[i])
-        console.log(cardColor); 
-        if (window.getComputedStyle(cardColor[0],null).getPropertyValue("background") === window.getComputedStyle(cardColor[1],null).getPropertyValue("background")); {
-            alert("Bien joué 1 points");  
-            cardColor = []; 
+        console.log(cardColor);
+        if(cardColor.length === 2 ) {
+            compare();   
         }        
     };    
+};
+function compare(){
+    if (window.getComputedStyle(cardColor[0],null).getPropertyValue("background") === window.getComputedStyle(cardColor[1],null).getPropertyValue("background")) {        
+        score ++;
+        console.log(score);
+        setTimeout(function(){ alert("Bien joué 1 points");}, 2000);
+          
+    } 
+    else {
+        cardColor[0].style.background = "#000000";
+        cardColor[1].style.background = "#000000";
+    }
+    cardColor = [];
 };
 
 
 
-    /*      else {
-        cardColor[0].style.background = "#000000";
-        cardColor[1].style.background = "#000000";
-    } */
-  
+
+         
    //Fonctions pour faire fonctionner le bouton 
 let game =document.getElementById("thegame")
 let btntext = document.getElementById("play")
