@@ -84,3 +84,7 @@ function removeBtn(){
 };
 
 
+
+// Faire le timer 
+// utiliser le getTime()
+

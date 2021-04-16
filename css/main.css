@@ -130,6 +130,7 @@ body {
   margin: 5vh 2vw;
   width: 10vw;
   background-color: black;
+  border-radius: 100%;
 }
 @media screen and (min-width :1024px) {
   header {
