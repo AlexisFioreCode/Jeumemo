@@ -136,6 +136,10 @@ body {
 .col:hover {
   transform: scale(.95)
 }
+#showscore {
+  text-align: center;
+  font-family: Roboto;
+}
 @media screen and (min-width :1024px) {
   header {
     display: flex;
